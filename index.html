@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Typing Master</h1>
+        <p>Select the number of words for your test:</p>
+        <form id="word-selection">
+            <label>
+                <input type="radio" name="word-length" value="10" checked>
+                Small (10 words)
+            </label><br>
+            <label>
+                <input type="radio" name="word-length" value="20">
+                Long (20 words)
+            </label><br>
+            <label>
+                <input type="radio" name="word-length" value="30">
+                Very Long (30 words)
+            </label><br>
+        </form>
+        <button id="start-btn">Start Test</button>
+        <button id="reset-btn" style="display: none;" title="Reset the test">Reset Test</button>
+        
+        <div id="test-area" style="display:none;">
+            <div id="text-container"></div>
+            <div class="results" style="display: none;">
+                <p id="wpm">WPM: 0</p>
+            </div>
+        </div>
+
+        <!-- Added note section -->
+        <div class="note" style="margin-top: 20px; font-size: 14px; color: #555;">
+            <h2>Instructions:</h2>
+            <ul>
+                <li>Press the spacebar after typing each word.</li>
+                <li>After finishing the test, click the <strong>Reset</strong> button to start over.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
